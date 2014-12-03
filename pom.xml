@@ -8,6 +8,41 @@
 	<packaging>pom</packaging>
 	<name>shared-lib</name>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<url>http://git.dvpt.nordnet.fr/dsi-si/ot-sharedlib</url>
+
+	<issueManagement>
+		<system>gitlab</system>
+		<url>http://git.dvpt.nordnet.fr/dsi-si/ot-sharedlib/issues</url>
+	</issueManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>internal</id>
+			<url>http://archiva.dvpt.nordnet.fr:8080/archiva/repository/internal/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://archiva.dvpt.nordnet.fr:8080/archiva/repository/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<scm>
+		<connection>scm:git@git.dvpt.nordnet.fr:dsi-si/ot-sharedlib.git</connection>
+		<url>git@git.dvpt.nordnet.fr:dsi-si/ot-sharedlib.git</url>
+		<developerConnection>scm:git:git@git.dvpt.nordnet.fr:dsi-si/ot-sharedlib.git</developerConnection>
+		<tag>0.0.1</tag>
+	</scm>
+
 	<properties>
 		<version.swagger.springmvc>0.5.3</version.swagger.springmvc>
 		<version.jsonpath>0.8.1</version.jsonpath>
@@ -107,7 +142,7 @@
 			<artifactId>c3p0</artifactId>
 			<version>0.9.0.4</version>
 		</dependency>
-		
+
 		<!-- Commons -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>

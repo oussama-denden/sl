@@ -51,7 +51,7 @@
 
 							<mappings>
 								<mapping>
-									<directory>${tomcat.sharedlib.folder}/shared-lib</directory>
+									<directory>${tomcat.sharedlib.folder}</directory>
 									<dependency />
 								</mapping>
 							</mappings>

@@ -23,7 +23,7 @@
 			<id>rpmbuild</id>
 			<activation>
 				<file>
-				 	<exists>/usr/bin/rpmbuild</exists>
+				<exists>/usr/bin/rpmbuild</exists>
 				</file>
 			</activation>
 			<build>
@@ -45,12 +45,12 @@
 							<group>ot-sharedlib</group>
 							<packager>ot-sharedlib</packager>
 							<needarch>shared-lib</needarch>
-							<copyright>GPLv2+</copyright>
 
 							<defaultFilemode>644</defaultFilemode>
 							<defaultUsername>root</defaultUsername>
 							<defaultGroupname>root</defaultGroupname>
 							<defaultDirmode>755</defaultDirmode>
+							<copyright>nordNet</copyright>
 
 							<requires>
 								<require>java</require>

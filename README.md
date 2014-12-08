@@ -1,4 +1,5 @@
-#hell yeah
+#Installation
 
-This is a great project, which names "Topaze" !
+chmod 755 install.sh
+./install.sh repertoire_installation_sharedlib
 

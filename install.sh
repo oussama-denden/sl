@@ -8,4 +8,4 @@ fin () {
 git pull origin master
 mvn clean install -Dtomcat.sharedlib.folder=$1
 array=($(ls ./target/rpm/ot-sharedlib/RPMS/noarch))
-rpm -Uvh /tmp/ot-sharedlib/target/rpm/ot-sharedlib/RPMS/noarch/$array
+rpm -Uvh ./target/rpm/ot-sharedlib/RPMS/noarch/$array

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nordnet.ot-sharedlib</groupId>
 	<artifactId>ot-sharedlib</artifactId>
-	<version>1.0.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>shared-lib</name>
 
@@ -21,34 +21,64 @@
 	<profiles>
 		<profile>
 			<id>copydep</id>
+			<build><plugins>
+			          <plugin>
+			                      <artifactId>maven-dependency-plugin</artifactId>
+			                                  <executions>
+			                                                <execution>
+			                                                                <phase>package</phase>
+			                                                                                <goals>
+			                                                                                                  <goal>copy-dependencies</goal>
+			                                                                                                                  </goals>
+			                                                                                                                                  <configuration>
+			                                                                                                                                                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+			                                                                                                                                                                    </configuration>
+			                                                                                                                                                                                  </execution>
+			                                                                                                                                                                                              </executions>
+			                                                                                                                                                                                                        </plugin>
+			</plugins></build>
+		</profile>
+		<profile>
+			<id>rpmbuild</id>
+		<!--	<activation>
+				<file>
+					<exists>/usr/bin/rpmbuild</exists>
+				</file>
+			</activation>-->
 			<build>
 				<plugins>
-					<plugin>
-						<artifactId>maven-dependency-plugin</artifactId>
+<!--					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>rpm-maven-plugin</artifactId>
+						<version>2.1</version>
 						<executions>
 							<execution>
 								<phase>package</phase>
 								<goals>
-									<goal>copy-dependencies</goal>
+									<goal>attached-rpm</goal>
 								</goals>
-								<configuration>
-									<outputDirectory>${project.build.directory}/lib</outputDirectory>
-								</configuration>
 							</execution>
 						</executions>
-					</plugin>
+						<configuration>
+							<name>ot-sharedlib</name>
+							<group>ot-sharedlib</group>
+							<copyright>nordNet</copyright>
+
+							<requires>
+								<require>java</require>
+							</requires>
+
+							<mappings>
+								<mapping>
+									<directory>${tomcat.sharedlib.folder}</directory>
+									<dependency />
+								</mapping>
+							</mappings>
+						</configuration>
+					</plugin>-->
 				</plugins>
 			</build>
 		</profile>
-		<!-- <profile> <id>rpmbuild</id> <activation> <file> <exists>/usr/bin/rpmbuild</exists> 
-			</file> </activation> <build> <plugins> <plugin> <groupId>org.codehaus.mojo</groupId> 
-			<artifactId>rpm-maven-plugin</artifactId> <version>2.1</version> <executions> 
-			<execution> <phase>package</phase> <goals> <goal>attached-rpm</goal> </goals> 
-			</execution> </executions> <configuration> <name>ot-sharedlib</name> <group>ot-sharedlib</group> 
-			<copyright>nordNet</copyright> <requires> <require>java</require> </requires> 
-			<mappings> <mapping> <directory>${tomcat.sharedlib.folder}</directory> <dependency 
-			/> </mapping> </mappings> </configuration> </plugin> </plugins> </build> 
-			</profile> -->
 	</profiles>
 
 	<url>http://git.dvpt.nordnet.fr/dsi-si/ot-sharedlib</url>
@@ -138,34 +168,34 @@
 		</dependency>
 
 		<!-- swagger -->
-		<dependency>
-			<groupId>com.mangofactory</groupId>
-			<artifactId>swagger-springmvc</artifactId>
-			<version>${version.swagger.springmvc}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-webmvc</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-web</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>javax.servlet</groupId>
-					<artifactId>servlet-api</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-log4j12</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>2.10.4</version>
-		</dependency>
+	<dependency>
+		<groupId>com.mangofactory</groupId>
+		<artifactId>swagger-springmvc</artifactId>
+		<version>${version.swagger.springmvc}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<dependency>
+		<groupId>org.scala-lang</groupId>
+		<artifactId>scala-library</artifactId>
+		<version>2.10.4</version>
+	</dependency>
 
 		<!-- Third Party dependencies -->
 		<dependency>

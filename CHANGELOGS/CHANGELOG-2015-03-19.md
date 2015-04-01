@@ -6,3 +6,4 @@ from 2015-03-19.
 
 * topaze
    * Migrating test api from unitils to spring-dbunit.
+   * Migration from Spring 3 to spring 4.

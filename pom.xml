@@ -53,10 +53,6 @@
 
 	<url>http://git.dvpt.nordnet.fr/dsi-si/ot-sharedlib</url>
 
-	<issueManagement>
-		<system>gitlab</system>
-		<url>http://git.dvpt.nordnet.fr/dsi-si/ot-sharedlib/issues</url>
-	</issueManagement>
 
 	<distributionManagement>
 		<repository>
@@ -70,10 +66,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git@git.dvpt.nordnet.fr:dsi-si/ot-sharedlib.git</connection>
-		<url>git@git.dvpt.nordnet.fr:dsi-si/ot-sharedlib.git</url>
-		<developerConnection>scm:git:git@git.dvpt.nordnet.fr:dsi-si/ot-sharedlib.git</developerConnection>
-		<tag>0.0.1</tag>
+		<connection>scm:git:http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</connection>
+		<url>http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</url>
+		<developerConnection>scm:git:http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</developerConnection>
 	</scm>
 
 	<properties>

@@ -244,5 +244,18 @@
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
 		</dependency>
+		
+		<!-- NORDNET CONFIGURATION FRAMEWORK -->
+		<dependency>
+			<groupId>framework.tools</groupId>
+			<artifactId>configuration</artifactId>
+			<version>1.0.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 </project>

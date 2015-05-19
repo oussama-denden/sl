@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nordnet.ot-sharedlib</groupId>
 	<artifactId>ot-sharedlib</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>pom</packaging>
 	<name>shared-lib</name>
 
@@ -46,8 +45,7 @@
 			<execution> <phase>package</phase> <goals> <goal>attached-rpm</goal> </goals> 
 			</execution> </executions> <configuration> <name>ot-sharedlib</name> <group>ot-sharedlib</group> 
 			<copyright>nordNet</copyright> <requires> <require>java</require> </requires> 
-			<mappings> <mapping> <directory>${tomcat.sharedlib.folder}</directory> <dependency 
-			/> </mapping> </mappings> </configuration> </plugin> </plugins> </build> 
+			<mappings> <mapping> <directory>${tomcat.sharedlib.folder}</directory> <dependency /> </mapping> </mappings> </configuration> </plugin> </plugins> </build> 
 			</profile> -->
 	</profiles>
 
@@ -69,7 +67,8 @@
 		<connection>scm:git:http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</connection>
 		<url>http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</url>
 		<developerConnection>scm:git:http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</developerConnection>
-	</scm>
+	  <tag>ot-sharedlib-1.0.1</tag>
+  </scm>
 
 	<properties>
 		<version.hibernate>4.3.8.Final</version.hibernate>

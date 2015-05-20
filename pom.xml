@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nordnet.ot-sharedlib</groupId>
 	<artifactId>ot-sharedlib</artifactId>
@@ -45,7 +46,8 @@
 			<execution> <phase>package</phase> <goals> <goal>attached-rpm</goal> </goals> 
 			</execution> </executions> <configuration> <name>ot-sharedlib</name> <group>ot-sharedlib</group> 
 			<copyright>nordNet</copyright> <requires> <require>java</require> </requires> 
-			<mappings> <mapping> <directory>${tomcat.sharedlib.folder}</directory> <dependency /> </mapping> </mappings> </configuration> </plugin> </plugins> </build> 
+			<mappings> <mapping> <directory>${tomcat.sharedlib.folder}</directory> <dependency 
+			/> </mapping> </mappings> </configuration> </plugin> </plugins> </build> 
 			</profile> -->
 	</profiles>
 
@@ -67,8 +69,8 @@
 		<connection>scm:git:http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</connection>
 		<url>http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</url>
 		<developerConnection>scm:git:http://stash.dvpt.nordnet.fr:7990/scm/ots/ot-sharedlib.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<version.hibernate>4.3.8.Final</version.hibernate>
@@ -94,7 +96,7 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>${version.spring.data.jpa}</version>
 		</dependency>
-		
+
 		<!-- QuartzJobBean in spring-context-support.jar -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -139,17 +141,17 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.5</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.fasterxml.jackson.module</groupId>
 			<artifactId>jackson-module-afterburner</artifactId>
 			<version>2.5.0</version>
 		</dependency>
-<dependency>
-	<groupId>org.json</groupId>
-	<artifactId>json</artifactId>
-	<version>20141113</version>
-</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
 
 
 		<dependency>
@@ -169,7 +171,7 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${version.hibernate}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
@@ -204,7 +206,7 @@
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
 		</dependency>
-		
+
 		<!-- NORDNET CONFIGURATION FRAMEWORK -->
 		<dependency>
 			<groupId>framework.tools</groupId>

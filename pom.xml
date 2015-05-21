@@ -85,6 +85,27 @@
 
 	<dependencies>
 
+		<!-- NORDNET COMMON FRAMEWORK -->
+		<!-- VAT -->
+		<dependency>
+			<groupId>com.nordnet.common</groupId>
+			<artifactId>vat.ws.client</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<!-- Alert -->
+		<dependency>
+			<groupId>com.nordnet.common</groupId>
+			<artifactId>alert.ws.client</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		
+		<!-- client saphir -->
+		<dependency>
+			<groupId>com.nordnet.saphir</groupId>
+			<artifactId>saphir.ws.client</artifactId>
+			<version>1.0.3-SNAPSHOT</version>
+		</dependency>		
+
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -178,12 +199,7 @@
 			<version>${version.hibernate.validator}</version>
 		</dependency>
 
-		<!-- MySQL JDBC Driver -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.6</version>
-		</dependency>
+		<!-- MySQL additional Driver ??? -->
 		<dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
@@ -219,5 +235,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+				
 	</dependencies>
 </project>

@@ -98,7 +98,13 @@
 			<artifactId>alert.ws.client</artifactId>
 			<version>1.0.3</version>
 		</dependency>
-		
+		<!-- TRACEABLE -->
+		<dependency>
+			<groupId>com.nordnet.common</groupId>
+			<artifactId>traceable</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+				
 		<!-- client saphir -->
 		<dependency>
 			<groupId>com.nordnet.saphir</groupId>
